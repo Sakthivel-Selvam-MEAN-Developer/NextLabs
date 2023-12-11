@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="shortcut icon" href="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+        type="image/x-icon">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent container-fluid ps-4 pe-4 pt-3 pb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    Company Name
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item ps-1 pe-1">
+                            <a class="nav-link active" aria-current="page" href="#">Features</a>
+                        </li>
+                        <li class="nav-item ps-1 pe-1">
+                            <a class="nav-link active" href="#">Enterprise</a>
+                        </li>
+                        <li class="nav-item ps-1 pe-1">
+                            <a class="nav-link active" href="#">Support</a>
+                        </li>
+                        <li class="nav-item ps-1 pe-1">
+                            <a class="nav-link active" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item ps-3 pe-1 ">
+                            <button class="btn btn-outline-primary ">Sign up</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="pricing-section">
+            <div class="container text-center">
+                <h1>Pricing</h1>
+                <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example.
+                    It's built with default Bootstrap components and utilities with little customization.</p>
+            </div>
+        </section>
+        <section class="container p-4">
+            <div class="title d-flex ">
+                <label for="userRange" class="form-label">Select user range</label>
+                <p class="ms-4">
+                    User(s) :
+                    <span id="rangeValue">5</span>
+                </p>
+            </div>
+            <input type="range" class="form-range" value="5" step="1" min="1" max="30" id="userRange"
+                oninput="handleRangeChange(event.target.value)">
+        </section>
+        <section class="card-section container d-flex flex-wrap justify-content-center ">
+            <div class="card m-2 highlighted" id="free">
+                <div class="card-header">
+                    <h4 class="fw-normal text-center ">Free</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title text-center ">$0
+                        <span class="text-secondary fw-normal">
+                            <small>/ mo</small>
+                        </span>
+                    </h1>
+                    <ul class="list-unstyled text-center pt-2 ">
+                        <li>
+                            10 users included
+                        </li>
+                        <li>
+                            2 GB of storage
+                        </li>
+                        <li>
+                            Email support
+                        </li>
+                        <li>
+                            Help center access
+                        </li>
+
+                        </l>
+                    </ul>
+                    <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Sign up for free
+                    </button>
+                </div>
+            </div>
+            <div class="card m-2" id="pro">
+                <div class="card-header">
+                    <h4 class="fw-normal text-center ">Pro</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title text-center ">$15
+                        <span class="text-secondary fw-normal">
+                            <small>/ mo</small>
+                        </span>
+                    </h1>
+                    <ul class="list-unstyled text-center pt-2 ">
+                        <li>
+                            20 users included
+                        </li>
+                        <li>
+                            10 GB of storage
+                        </li>
+                        <li>
+                            Priority email support
+                        </li>
+                        <li>
+                            Help center access
+                        </li>
+
+                        </l>
+                    </ul>
+                    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Contact us
+                    </button>
+                </div>
+            </div>
+            <div class="card m-2" id="enterprice">
+                <div class="card-header">
+                    <h4 class="fw-normal text-center ">Enterprise</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title text-center ">$29
+                        <span class="text-secondary fw-normal">
+                            <small>/ mo</small>
+                        </span>
+                    </h1>
+                    <ul class="list-unstyled text-center pt-2">
+                        <li>
+                            30 users included
+                        </li>
+                        <li>
+                            15 GB of storage
+                        </li>
+                        <li>
+                            Phone and Email support
+                        </li>
+                        <li>
+                            Help center access
+                        </li>
+
+                        </l>
+                    </ul>
+                    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Contact us
+                    </button>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Place order</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                onclick="(document.getElementById('name').value = '') || (document.getElementById('mail').value = '') || (document.getElementById('order-comments').value = '')"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#">
+                                <div class="name pb-2">
+                                    <label for="name" class="pb-1">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control " />
+                                </div>
+                                <div class="email pb-2">
+                                    <label for="mail" class="pb-1">Mail</label>
+                                    <input type="email" name="email" id="mail" class="form-control " />
+                                </div>
+                                <div class="order-comments pb-2">
+                                    <label for="order-comments" class="pb-1">Order comments</label>
+                                    <textarea id="order-comments" class="form-control " name="order-comments" rows="4"
+                                        cols="50"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                onclick="(document.getElementById('name').value = '') || (document.getElementById('mail').value = '') || (document.getElementById('order-comments').value = '')">Close</button>
+                            <button type="button" class="btn btn-primary" 
+                                onclick="handlePlaceOrder(document.getElementById('name'), document.getElementById('mail'), document.getElementById('order-comments'))">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="container mt-5 pt-5">
+            <div class="footer-body row">
+                <div class="footer-logo col-12 col-md">
+                    <img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="footer-logo"
+                        width="30">
+                    <p class="text-secondary pt-2">&copy; 2017 - 2023</p>
+                </div>
+                <div class="features col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled ">
+                        <li>
+                            <a class="text-secondary text-decoration-none " href="#">Cool stuff</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Random feature</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Team feature</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Stuff for developers</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Another one</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Last time</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Resources col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Resource</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Resource name</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Another resource</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Final resource</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about col-md col-6">
+                    <h5>About</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Team</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Locations</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Privacy</a>
+                        </li>
+                        <li>
+                            <a class="text-secondary text-decoration-none" href="#">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./index.js"></script>
+
+</html>
